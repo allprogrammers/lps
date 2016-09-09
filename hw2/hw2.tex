@@ -1,0 +1,122 @@
+\documentclass{article}
+
+\usepackage{geometry}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+
+\title{CORE111 Logical Problem Solving\\Homework 2}
+\author{Nirmal Advani}
+
+\begin{document}
+\maketitle
+
+\section{Elections}
+
+(a) $p\vee q$ : The election is decided or the votes has been counted.
+
+(b) $\neg p \wedge q$ : The election is not decided and the votes has been counted.
+
+(c) $\neg q\vee (\neg p \wedge q)$ : The votes have not been counted or the election is not decided and votes has been counted. 
+
+\section{Think and Drive}
+
+(a) $p\rightarrow \neg q$
+
+(b) $p\rightarrow $q
+
+(c) $\neg p \rightarrow \neg q$
+
+\section{Arguments}
+
+(a) Conclusion: He is a vegetarian, therefore not eating meat is not a good idea.
+This argument is invalid because he is vegetarian and he should not eat meat. If he eats meat, he is no more a vegetarian. The statement "not eating meat is not a good idea" implies that eating meat is good idea  which contradicts the definition of vegetarian, a person who do no eat meat. Eating vegetable is beneficial for people who have Parkinson's disease as compare to eating meat. Hence eating meat is not good idea for people who have Parkin's disease. 
+
+
+(b) Conclusion: You can not win without playing Powerball.
+Argument "If you don't play, you can't win" implies that you can win the jackpot if you play the game. The argument is valid because without playing Powerball one can not win the jackpot even though he can earn or get money equivalent of Powerball jackpot, but it won't be the money won from Powerball jackpot.  
+
+\section{Formulas}
+
+(a) $p \leftrightarrow q$
+
+Here is the truth table for $p\leftrightarrow q$.
+
+\begin{tabular}{ll|l}
+  $p$ & $q$ & $p\leftrightarrow q$\\
+  \hline
+  F & F & T \\
+  F & T & F \\
+  T & F & F \\
+  T & T & T
+\end{tabular}
+
+It is not tautology since all truth values of $p\leftrightarrow q$ are not true. It is also not contradiction because all truth values of $p\leftrightarrow q$ are not false. 
+
+
+
+(b) $p \wedge \neg q$
+
+Here is the truth table for $p \wedge \neg q$.
+
+\begin{tabular}{ll|l|l}
+  $p$ & $q$ & $\neg q$ & $p \wedge \neg q$\\
+  \hline 
+  F & F & T & F \\
+  F & T & F & F \\
+  T & F & T & F \\
+  T & T & F & T
+\end{tabular}
+
+It is neither tautology nor contradiction because all truth values of $p \wedge \neg q$ are neither true not false.
+
+(c) (( $p \rightarrow q$ )$ \rightarrow p$ )$ \rightarrow p$
+ 
+ Here is truth table for (( $p \rightarrow q$ )$ \rightarrow p$ )$ \rightarrow p$
+
+\begin{tabular}{ll|l|l|l|l|l}
+  $p$ & $q$ & $\neg p$ & $\neg q$ & $p \rightarrow q$ & $( p \rightarrow q ) \rightarrow p$ & $( p \rightarrow q ) \rightarrow p ) \rightarrow p$ \\
+  \hline
+  F & F & T & F & T \\
+  F & T & T & F & T\\
+  T & F & F & T & T\\
+  T & T & T & T & T
+  
+\end{tabular}
+  
+  It is a tautology since all truth values of (( $p \rightarrow q$ )$ \rightarrow p$ )$ \rightarrow p$ are true. 
+
+(d) ( $p \rightarrow q$ )$ \rightarrow (\neg p \rightarrow \neg q )$
+
+Here is the truth table for ( $p \rightarrow q$ )$ \rightarrow (\neg p \rightarrow \neg q )$
+
+\begin{tabular}{ll|l|l|l|l|l}
+  $p$ & $q$ & $\neg p$ & $\neg q$ & $p \rightarrow q$ & $\neg p \rightarrow \neg q$  & ( $p \rightarrow q$ )$ \rightarrow (\neg p \rightarrow \neg q )$\\
+  \hline
+  F & F & T & T & T & T & T \\
+  F & T & T & F & T & T & T \\
+  T & F & F & T & F & F & T\\
+  T & T & F & T & T & T & T
+ 
+\end{tabular}
+  
+  Since all truth values for ( $p \rightarrow q$ )$ \rightarrow (\neg p \rightarrow \neg q )$ are true, it is tautology.
+  
+(e)  ($p \wedge (p \rightarrow q )$)$ \wedge \neg p$
+
+Here is the truth table for ($p \wedge (p \rightarrow q )$)$ \wedge \neg p$.
+
+\begin{tabular}{ll|l|l|l|l}
+  $p$ & $q$ & $\neg p$ & $p \rightarrow q$ & $(p \wedge (p \rightarrow q ))$ & $(p \wedge (p \rightarrow q )) \wedge \neg p$\\
+  \hline
+  F & F & T & T & F & F \\
+  F & T & T & T & F & F \\
+  T & F & F & F & F & F \\
+  T & T & F & T & T & F
+ 
+\end{tabular}
+
+It is contradiction because all truth values of ($p \wedge (p \rightarrow q )$)$ \wedge \neg p$ are false. 
+
+  
+\end{document}
