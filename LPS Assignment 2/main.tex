@@ -1,0 +1,57 @@
+\documentclass{article}
+\let\biconditional\leftrightarrow
+\usepackage{geometry}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+
+\title{CORE111 Logical Problem Solving\\Homework 1}
+\author{Muhammad Hamza Ali}
+
+\begin{document}
+\maketitle
+
+\section{Elections}
+
+(a) $p\vee q$ : The election is decided or the votes have been counted.
+
+(b) $\neg p \wedge q$ : The election is not decided and the votes have been counted.
+
+(c) $\neg q\vee (\neg p \wedge q)$ : The votes have not been counted, or the election is not decided and the votes have been counted.
+
+\section{Think and Drive}
+
+(a) $p \wedge \neg q$
+
+(b) $p \rightarrow q$
+
+(c) $\neg p \rightarrow \neg q$
+
+\section{Arguments}
+
+(a) The conclusion is that not eating meat is probably not a good idea. The conclusion seems false to me because there are many reasons to be a vegetarian and non-veg people also get Parkinson's. So saying that not eating meat is not a good idea doesn't seem justified.
+
+(b) The conclusion can be related to fallacies. The conclusion is that you should play Powerball and it seems false to me because playing doesn't imply that you will win.
+\section{Formulas}
+
+Here is the truth table for $p\rightarrow q$.
+
+\begin{tabular}{ll||l|l|l|l}
+  $p$ & $q$ & $p \rightarrow q$ & $p \leftrightarrow q$ & $p \wedge \neg q$ & $ ((p \rightarrow q) \rightarrow p) \rightarrow p$\\
+  \hline
+  F & F & T & T & F & T\\
+  F & T & T & F & F & T\\
+  T & F & F & F & T & T\\
+  T & T & T & T & F & T
+\end{tabular}
+\break
+\begin{tabular}{ll||l|l}
+  $p$ & $q$ & $(p \rightarrow q) \rightarrow (\neg q \rightarrow \neg p)$ & $(p\wedge(p \rightarrow q)) \wedge \neg p$\\
+  \hline
+  F & F & T & F\\
+  F & T & T & F\\
+  T & F & T & F\\
+  T & T & T & F
+\end{tabular} \break \break
+a) and b) are neither tautology nor contradiction while c) and d) is a tautology and e) is a contradiction.
+\end{document}

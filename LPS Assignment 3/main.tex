@@ -1,0 +1,400 @@
+\documentclass{article}
+
+\usepackage{geometry}
+\usepackage{colortbl}
+\usepackage{amsmath,amssymb}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+
+\title{CORE111 Logical Problem Solving\\Homework 3}
+\author{Muhammad Hamza Ali}
+
+\begin{document}
+\maketitle
+
+\section{Proofs}
+
+(a)There are two workings for this question. Please comment. \newline (First attempt)Logic statements: 
+
+\begin{tabular}{c@{\,}l@{}} 
+                         & $\forall x (P(x) \rightarrow \exists y  S(y,x) $ \\
+                         \\
+                         & 1 $P \rightarrow \neg M$ \\
+                         & 2 $C \rightarrow M$ \\
+                         & 3 $L \rightarrow C$ \\
+                         & 4 $\neg P \rightarrow \neg E$ \\
+                         & 5 $\neg E \rightarrow \neg C$ \\
+\arrayrulecolor{blue}    & 6 $P \vee \neg P$ \\
+\cline{2-2}
+    $\therefore$         & $\neg L$ \\
+\end{tabular}
+\begin{tabular}{c@{\,}l@{}} 
+                         & $M \rightarrow \neg P (Modus Tollens 1)$ \\
+                         & $C \rightarrow M$ \\
+                         & $L \rightarrow C$ \\
+                         & $\neg P \rightarrow \neg E$ \\
+                         & $\neg E \rightarrow \neg C$ \\
+\arrayrulecolor{blue}    & $P \vee \neg P$ \\
+\cline{2-2}
+    $\therefore$         & $\neg L$ \\
+\end{tabular}
+\begin{tabular}{c@{\,}l@{}} 
+                         &\\ & $C \rightarrow \neg P (Hypothetical Syllogism 1,2)$ \\
+                         & $L \rightarrow C$ \\
+                         & $\neg P \rightarrow \neg E$ \\
+                         & $\neg E \rightarrow \neg C$ \\
+\arrayrulecolor{blue}    & $P \vee \neg P$ \\
+\cline{2-2}
+    $\therefore$         & $\neg L$ \\
+\end{tabular}
+\newline
+\begin{tabular}{c@{\,}l@{}} 
+                         & $C \rightarrow \neg C (Hypothetical Syllogism 2,4,5)$ \\
+                         & $L \rightarrow C$ \\
+\arrayrulecolor{blue}    & $P \vee \neg P$ \\
+\cline{2-2}
+    $\therefore$         & $\neg L$ \\
+\end{tabular}
+
+(Second attempt) Logic statements
+\newline
+\newline
+\begin{tabular}{c@{\,}l@{}} 
+                         & 1 $P \rightarrow \neg M$ \\
+                         & 2 $C \rightarrow M$ \\
+                         & 3 $L \rightarrow C$ \\
+                         & 4 $\neg P \rightarrow \neg E$ \\
+                         & 5 $\neg E \rightarrow \neg C$ \\
+\arrayrulecolor{blue}    & 6 $P \vee \neg P$ \\
+\cline{2-2}
+    $\therefore$         & $\neg L$ \\
+\end{tabular}
+\begin{tabular}{c@{\,}l@{}} 
+                         & $P \rightarrow \neg C$ \\
+                         & $C \rightarrow M$ \\
+                         & $L \rightarrow C$ \\
+                         & $\neg P \rightarrow \neg E$ \\
+                         & $\neg E \rightarrow \neg C$ \\
+\arrayrulecolor{blue}    & $P \vee \neg P$ \\
+\cline{2-2}
+    $\therefore$         & $\neg L$ \\
+\end{tabular}
+\begin{tabular}{c@{\,}l@{}} 
+                         &\\ &\\ & $P \rightarrow \neg C$ \\
+                         & $L \rightarrow C$ \\
+                         & $\neg P \rightarrow \neg C$ \\
+\arrayrulecolor{blue}    & $P \vee \neg P$ \\
+\cline{2-2}
+    $\therefore$         & $\neg L$ \\
+\end{tabular}
+\begin{tabular}{c@{\,}l@{}} 
+                         &\\ &\\ & $P \rightarrow \neg C$ \\
+                         & $\neg C \rightarrow \neg L$ \\
+                         & $\neg P \rightarrow \neg C$ \\
+\arrayrulecolor{blue}    & $P \vee \neg P$ \\
+\cline{2-2}
+    $\therefore$         & $\neg L$ \\
+\end{tabular}
+\begin{tabular}{c@{\,}l@{}} 
+                         &\\ &\\ &\\ & $P \rightarrow \neg L$ \\
+                         & $\neg P \rightarrow \neg L$ \\
+\arrayrulecolor{blue}    & $P \vee \neg P$ \\
+\cline{2-2}
+    $\therefore$         & $\neg L$ \\
+\end{tabular}
+\begin{tabular}{c@{\,}l@{}} 
+                         
+                         &\\ &\\ &\\ & \\
+                         & $\neg P \rightarrow \neg L$ \\
+\arrayrulecolor{blue}    & $\neg L \vee \neg P$ \\
+\cline{2-2}
+    $\therefore$         & $\neg L$ \\
+\end{tabular}
+\newline
+\begin{tabular}{c@{\,}l@{}}&\\
+\arrayrulecolor{blue}    & $\neg L \vee \neg L$ \\
+\cline{2-2}
+    $\therefore$         & $\neg L$ \\
+\end{tabular}
+
+\break
+(b) Logic statements:
+\newline
+\newline
+\begin{tabular}{c@{\,}l@{}} 
+                         & $\neg C \rightarrow (C \vee (J \rightarrow D))$ \\
+                         & $C \rightarrow (C \wedge U)$ \\
+                         & $\neg (C \wedge U)$ \\
+                         & $\neg D$ \\
+\arrayrulecolor{blue}
+\cline{2-2}
+    $\therefore$         & $\neg J$ \\
+\end{tabular}
+\begin{tabular}{c@{\,}l@{}} 
+                         & $\neg C \rightarrow (J \rightarrow D)$ \\
+                         & $C \rightarrow U$ \\
+                         & $\neg C \vee \neg U$ \\
+                         & $\neg D$ \\
+\arrayrulecolor{blue}
+\cline{2-2}
+    $\therefore$         & $\neg J$ \\
+\end{tabular}
+\begin{tabular}{c@{\,}l@{}} 
+                         & \\
+                         & $\neg C \rightarrow (\neg D \rightarrow \neg J)$ \\
+                         & $\neg C \vee \neg C$ \\
+                         & $\neg D$ \\
+\arrayrulecolor{blue}
+\cline{2-2}
+    $\therefore$         & $\neg J$ \\
+\end{tabular}
+\begin{tabular}{c@{\,}l@{}} 
+                         & \\
+                         & $\neg C \rightarrow (\neg D \rightarrow \neg J)$ \\
+                         & $\neg C$ \\
+                         & $\neg D$ \\
+\arrayrulecolor{blue}
+\cline{2-2}
+    $\therefore$         & $\neg J$ \\
+\end{tabular}
+
+(c) Logic statements:
+\newline
+\begin{tabular}{c@{\,}l@{}} 
+                         & \\
+                         & $M \vee P$ \\
+                         & $(P \vee S) \rightarrow (R \wedge D) \neg C$ \\
+                         & $\neg M$ \\
+\arrayrulecolor{blue}
+\cline{2-2}
+    $\therefore$         & $R$ \\
+\end{tabular}
+\begin{tabular}{c@{\,}l@{}} 
+                         & \\
+                         & \\
+                         & $(P \vee S) \rightarrow (R \wedge D)$\\
+                         & $P$ \\
+\arrayrulecolor{blue}
+\cline{2-2}
+    $\therefore$         & $R$ \\
+\end{tabular}
+\begin{tabular}{c@{\,}l@{}} 
+                         & \\
+                         & \\
+                         & \\
+                         & $(R \wedge D)$\\
+\arrayrulecolor{blue}
+\cline{2-2}
+    $\therefore$         & $R$ \\
+\end{tabular}
+\newline
+(d) Logic statements:
+\newline
+\begin{tabular}{c@{\,}l@{}} 
+                         & \\ & \\
+                         & $\neg E \vee (B \wedge P)$ \\
+                         & $\neg E \vee (G \wedge W)$ \\
+                         & $\neg P \vee \neg W$ \\
+\arrayrulecolor{blue}
+\cline{2-2}
+    $\therefore$         & $\neg E$ \\
+\end{tabular}
+\begin{tabular}{c@{\,}l@{}} 
+                         & $\neg E \vee B$ \\
+                         & $\neg E \vee P$ \\
+                         & $\neg E \vee G$ \\
+                         & $\neg E \vee W$ \\
+                         & $\neg P \vee W$ \\
+\arrayrulecolor{blue}
+\cline{2-2}
+    $\therefore$         & $\neg E$ \\
+\end{tabular}
+
+(e) \newline
+\begin{tabular}{c@{\,}l@{}} 
+                         & $G \rightarrow A$ \\
+                         & $G \rightarrow L$ \\
+\arrayrulecolor{blue}
+\cline{2-2}
+    $\therefore$         & $G \rightarrow (A \wedge L)$ \\
+\end{tabular}
+\begin{tabular}{c@{\,}l@{}} 
+                         & \\
+                         & $(G \rightarrow A) \wedge (G \rightarrow L)$ \\
+\arrayrulecolor{blue}
+\cline{2-2}
+    $\therefore$         & $G \rightarrow (A \wedge L)$ \\
+\end{tabular}
+\begin{tabular}{c@{\,}l@{}} 
+                         & \\
+                         & $(\neg G \vee A) \wedge (\neg G \vee L)$ \\
+\arrayrulecolor{blue}
+\cline{2-2}
+    $\therefore$         & $G \rightarrow (A \wedge L)$ \\
+\end{tabular}
+\begin{tabular}{c@{\,}l@{}} 
+                         & \\
+                         & $\neg G \vee (A \wedge L)$ \\
+\arrayrulecolor{blue}
+\cline{2-2}
+    $\therefore$         & $G \rightarrow (A \wedge L)$ \\
+\end{tabular}
+\newline
+(f)  \newline
+\begin{tabular}{c@{\,}l@{}} 
+                         & \\
+                         & $H \rightarrow D$ \\
+                         & $U \rightarrow S$ \\
+\arrayrulecolor{blue}
+\cline{2-2}
+    $\therefore$         & $(H \wedge U) \rightarrow (S \wedge D)$ \\
+\end{tabular}
+\begin{tabular}{c@{\,}l@{}} 
+                         & \\ & \\
+                         & $(H \wedge U) \rightarrow (D \wedge U)$ \\
+\arrayrulecolor{blue}
+\cline{2-2}
+    $\therefore$         & $(H \wedge U) \rightarrow (D \wedge S)$ \\
+\end{tabular}
+
+(g)  \newline
+\begin{tabular}{c@{\,}l@{}} 
+                         & \\ & \\
+                         & $(Z \rightarrow C) \rightarrow B$ \\
+                         & $(V \rightarrow Z) \rightarrow B$ \\
+\arrayrulecolor{blue}
+\cline{2-2}
+    $\therefore$         & $B$ \\
+\end{tabular}
+\begin{tabular}{c@{\,}l@{}} 
+                         & \\ & \\
+                         & $\neg (\neg Z \vee C) \vee B$ \\
+                         & $\neg(\neg V \vee Z) \vee B$ \\
+\arrayrulecolor{blue}
+\cline{2-2}
+    $\therefore$         & $B$ \\
+\end{tabular}
+\begin{tabular}{c@{\,}l@{}} 
+                         & \\ & \\
+                         & $( Z \wedge \neg C) \vee B$ \\
+                         & $(V \wedge \neg C) \vee B$ \\
+\arrayrulecolor{blue}
+\cline{2-2}
+    $\therefore$         & $B$ \\
+\end{tabular}
+\begin{tabular}{c@{\,}l@{}} 
+                         & \\ & \\
+                         & $( Z \vee B) \wedge (\neg C \vee B)$ \\
+                         & $( V \vee B) \wedge (\neg Z \vee B)$ \\
+\arrayrulecolor{blue}
+\cline{2-2}
+    $\therefore$         & $B$ \\
+\end{tabular} 
+\newline
+\begin{tabular}{c@{\,}l@{}} 
+                         & \\ & \\
+                         & $(Z \vee B)$ \\
+                         & $(\neg C \vee B)$ \\
+                         & $(V \vee B)$ \\
+                         & $(\neg Z \vee B)$ \\
+\arrayrulecolor{blue}
+\cline{2-2}
+    $\therefore$         & $B$ \\
+\end{tabular}
+\begin{tabular}{c@{\,}l@{}} 
+                         & \\ & \\
+                         & $(\neg C \vee B)$ \\
+                         & $(V \vee B)$ \\
+                         & $B \vee B$ \\
+\arrayrulecolor{blue}
+\cline{2-2}
+    $\therefore$         & $B$ \\
+\end{tabular}
+
+\section{More Proofs}
+
+(a) Logic statements:
+\newline
+\begin{tabular}{c@{\,}l@{}} 
+                         & \\ & \\
+                         & $S \rightarrow V$ (Modus Tollens) \\
+\arrayrulecolor{blue}
+\cline{2-2}
+    $\therefore$         & $\neg V \rightarrow \neg S$ \\
+\end{tabular}
+
+(b) Logic statements:
+\newline
+\begin{tabular}{c@{\,}l@{}} 
+                         & \\ & \\
+                         & $(\neg S \wedge V) \rightarrow \neg P$ \\
+                         & $P$ \\
+                         & $V$ \\
+                         
+\arrayrulecolor{blue}
+\cline{2-2}
+    $\therefore$         & $S$ \\
+\end{tabular}
+\begin{tabular}{c@{\,}l@{}} 
+                         & \\ & \\
+                         & $P \rightarrow \neg(\neg S \wedge V)$ \\
+                         & $P$ \\
+                         & $V$ \\
+                         
+\arrayrulecolor{blue}
+\cline{2-2}
+    $\therefore$         & $S$ \\
+\end{tabular}
+\begin{tabular}{c@{\,}l@{}} 
+                         & \\ & \\
+                         & $P \rightarrow (S \vee \neg V)$ \\
+                         & $P$ \\
+                         & $V$ \\
+                         
+\arrayrulecolor{blue}
+\cline{2-2}
+    $\therefore$         & $S$ \\
+\end{tabular}
+\begin{tabular}{c@{\,}l@{}} 
+                         & \\ & \\ & \\
+                         & $S \vee \neg V$\\
+                         & $V$ \\
+                         
+\arrayrulecolor{blue}
+\cline{2-2}
+    $\therefore$         & $S$ \\
+\end{tabular}
+\newline
+(c)Logic statement:
+\newline
+\begin{tabular}{c@{\,}l@{}} 
+                         & \\
+                         & $\neg S \rightarrow(\neg P \vee \neg V)$ \\
+                         & $V \wedge P$ \\
+                         
+\arrayrulecolor{blue}
+\cline{2-2}
+    $\therefore$         & $S$ \\
+\end{tabular}
+\begin{tabular}{c@{\,}l@{}} 
+                         & \\
+                         & $\neg (\neg P \vee \neg V) \rightarrow S$ \\
+                         & $V \wedge P$ \\
+                         
+\arrayrulecolor{blue}
+\cline{2-2}
+    $\therefore$         & $S$ \\
+\end{tabular}
+\begin{tabular}{c@{\,}l@{}} 
+                         & \\
+                         & $( P \wedge V) \rightarrow S$ \\
+                         & $V \wedge P$ \\
+                         
+\arrayrulecolor{blue}
+\cline{2-2}
+    $\therefore$         & $S$ \\
+\end{tabular}
+
+
+\end{document}
